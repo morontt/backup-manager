@@ -1,0 +1,19 @@
+{
+    "name": "lazyants/backup-manager",
+    "description": "Backup Manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "morontt",
+            "email": "morontt@gmail.com",
+            "homepage": "https://morontt.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "BackupManager\\": "src/" }
+    },
+    "require": {
+        "symfony/console": "3.0.*"
+    },
+    "minimum-stability": "stable"
+}
