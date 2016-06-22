@@ -1,0 +1,13 @@
+sites:
+    myblog:
+        database:
+            host: localhost  #default
+            dbname: database
+            user: dbuser
+            password: secret
+        encryption:
+            key: DDgUrHryqyPXP3PFYxxkUd5l2oL6OE
+            cipher: bf #default (e.g. desx, aes128, rc4. show openssl enc -h)
+        dropbox:
+            key: 23456
+            secret: 987654

@@ -13,7 +13,19 @@
         "psr-4": { "BackupManager\\": "src/" }
     },
     "require": {
-        "symfony/console": "3.0.*"
+        "ext-sqlite3": "*",
+        "doctrine/dbal": "~2.5",
+        "dropbox/dropbox-sdk": "1.1.*",
+        "symfony/console": "3.1.*",
+        "symfony/event-dispatcher": "3.1.*",
+        "symfony/config": "3.1.*",
+        "symfony/process": "3.1.*",
+        "symfony/yaml": "3.1.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "./console init"
+        ]
     },
     "minimum-stability": "stable"
 }
