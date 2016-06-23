@@ -69,6 +69,10 @@ class DatabaseBackup extends BaseCommand
         $dbxClient->uploadFile('/dumps/' . pathinfo($path, PATHINFO_BASENAME), Dropbox\WriteMode::add(), $f);
         fclose($f);
         unlink($path);
+
+        $output->writeln(
+            sprintf('[%s] %s', (new \DateTime())->format('Y-m-d H:i:s'), pathinfo($path, PATHINFO_BASENAME))
+        );
     }
 
     /**

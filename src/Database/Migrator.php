@@ -50,6 +50,13 @@ class Migrator
         $tokenTable->setPrimaryKey(['id']);
         $tokenTable->addUniqueIndex(['site']);
 
+        $fileTable = $schema->createTable('backuper_file');
+        $fileTable->addColumn('id', 'integer', ['autoincrement' => true, 'unsigned' => true]);
+        $fileTable->addColumn('file_hash', 'string', ['length' => 40]);
+        $fileTable->addColumn('updated_at', 'datetime');
+        $fileTable->addUniqueIndex(['file_hash']);
+        $fileTable->setPrimaryKey(['id']);
+
         return $schema;
     }
 }

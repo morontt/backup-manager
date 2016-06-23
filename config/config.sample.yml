@@ -5,6 +5,10 @@ sites:
             dbname: database
             user: dbuser
             password: secret
+        base_path: /srv/www/myblog
+        directories:
+            pdfs:  var/data/articles
+            logos: web/uploads/logo
         encryption:
             key: DDgUrHryqyPXP3PFYxxkUd5l2oL6OE
             cipher: bf #default (e.g. desx, aes128, rc4. show openssl enc -h)

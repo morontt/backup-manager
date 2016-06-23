@@ -16,6 +16,20 @@ Get access token for site *myblog*
     ./console dropbox:auth myblog
 ```
 
+## Usage
+
+Backup database for site *myblog* (MySQL only)
+
+```bash
+    ./console backup:database myblog
+```
+
+Backup files for site *myblog*
+
+```bash
+    ./console backup:files myblog
+```
+
 ### Requirements
 
 * openssl
