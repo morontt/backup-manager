@@ -11,7 +11,6 @@ class Repository
      */
     protected $db;
 
-
     public function __construct()
     {
         $this->db = Connection::getConnection();
@@ -52,6 +51,7 @@ class Repository
 
     /**
      * @param string $site
+     *
      * @return string|null
      */
     public function getAccessToken($site)
@@ -66,6 +66,7 @@ class Repository
 
     /**
      * @param string $hash
+     *
      * @return \DateTime|null
      */
     public function getFileUpdatedTime($hash)

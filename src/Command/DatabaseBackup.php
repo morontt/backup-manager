@@ -23,7 +23,6 @@ class DatabaseBackup extends BaseCommand
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return void
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
@@ -77,6 +76,7 @@ class DatabaseBackup extends BaseCommand
 
     /**
      * @param string $site
+     *
      * @return string
      */
     protected function getDumpPath($site)
@@ -92,6 +92,7 @@ class DatabaseBackup extends BaseCommand
     /**
      * @param string $path
      * @param array $config
+     *
      * @return string
      */
     protected function encrypt($path, array $config)

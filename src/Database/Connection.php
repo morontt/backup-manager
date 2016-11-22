@@ -9,6 +9,7 @@ class Connection
 {
     /**
      * @return \Doctrine\DBAL\Connection
+     *
      * @throws \Doctrine\DBAL\DBALException
      */
     public static function getConnection()

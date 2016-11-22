@@ -29,7 +29,6 @@ class FilesBackup extends BaseCommand
      */
     protected $client;
 
-
     protected function configure()
     {
         $this
@@ -41,7 +40,6 @@ class FilesBackup extends BaseCommand
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return void
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
@@ -134,6 +132,7 @@ class FilesBackup extends BaseCommand
 
     /**
      * @param string $directory
+     *
      * @return \SplFileInfo[]
      */
     protected function getFileList($directory)

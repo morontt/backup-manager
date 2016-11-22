@@ -11,14 +11,14 @@ class Migrator
      */
     protected $db;
 
-
-    function __construct()
+    public function __construct()
     {
         $this->db = Connection::getConnection();
     }
 
     /**
      * @return array
+     *
      * @throws \Doctrine\DBAL\DBALException
      */
     public function migrate()

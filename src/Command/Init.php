@@ -20,7 +20,6 @@ class Init extends Command
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return void
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {

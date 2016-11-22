@@ -23,7 +23,6 @@ class DropboxAuth extends BaseCommand
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return void
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
@@ -45,11 +44,11 @@ class DropboxAuth extends BaseCommand
             exit(1);
         }
 
-        $webAuth = new Dropbox\WebAuthNoRedirect($appInfo, "examples-authorize", "en");
+        $webAuth = new Dropbox\WebAuthNoRedirect($appInfo, 'examples-authorize', 'en');
         $authorizeUrl = $webAuth->start();
 
         $output->writeln(sprintf("\n1. Go to: %s", $authorizeUrl));
-        $output->writeln("2. Click <comment>\"Allow\"</comment> (you might have to log in first).");
+        $output->writeln('2. Click <comment>"Allow"</comment> (you might have to log in first).');
         $output->writeln("3. Copy the authorization code.\n");
 
         $dialog = $this->getHelper('question');
@@ -60,6 +59,7 @@ class DropboxAuth extends BaseCommand
                     'Empty code :('
                 );
             }
+
             return $answer;
         });
         $question->setMaxAttempts(3);
@@ -69,8 +69,8 @@ class DropboxAuth extends BaseCommand
         list($accessToken, $userId) = $webAuth->finish($authCode);
 
         $output->writeln("\nAuthorization complete.");
-        $output->writeln(sprintf("User ID: <comment>%s</comment>", $userId));
-        $output->writeln(sprintf("Access Token: <comment>%s</comment>", $accessToken));
+        $output->writeln(sprintf('User ID: <comment>%s</comment>', $userId));
+        $output->writeln(sprintf('Access Token: <comment>%s</comment>', $accessToken));
 
         $repository = new Repository();
         $repository->saveAccessToken($site, $accessToken);
